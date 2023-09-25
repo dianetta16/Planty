@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/BrainstormForce
 Tags: gutenberg, blocks, gutenberg blocks, editor, block
 Requires at least: 5.6
 Requires PHP: 7.4
-Tested up to: 6.3.0
-Stable tag: 2.7.6
+Tested up to: 6.3.1
+Stable tag: 2.7.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -214,6 +214,37 @@ When you use the Spectra along with the free Astra theme, you get a huge library
 Our external packages use [Rating Star Component](https://github.com/n49/react-stars) that are distributed under the terms of the ISC. While [Slick](https://github.com/akiran/react-slick), [Lottie](https://github.com/chenqingspring/react-lottie) and [Striptags](https://github.com/ericnorris/striptags) is distributed under the terms of the MIT.
 
 == Changelog ==
+
+= 2.7.10 - FRIDAY, 22nd SEPTEMBER 2023 =
+* Security Fix: Hardened the security of the plugin. Props: Patchstack
+* Fix: Container - Resolved an issue wherein container background images would not render as intended during site migration.
+* Fix: Admin - Resolved an issue in which a deprecation notice would be shown on PHP v8.2 and above.
+
+= 2.7.9 - WEDNESDAY, 13th SEPTEMBER 2023 =
+* Improvement: Info Box - Changed the Info Box icon position dropdown to a multi-control.
+* Fix: Call To Action - Resolved an issue wherein the buttons would not be aligned as intended.
+* Fix: How To - Resolved an issue in which the responsive heading font-sizes would not work as intended.
+* Fix: Image Gallery - Resolved an issue wherein the lightbox would not work as intended within Containers.
+* Fix: Post Blocks - Resolved an issue wherein text-formatting for buttons would appear as HTML tags on the front-end.
+* Fix: Price List - Resolved an issue in which the title bottom margin, row, and column gaps would not work as intended in the responsive editor.
+
+= 2.7.8 - TUESDAY, 5th SEPTEMBER 2023 =
+* Improvement: Global - Enhanced the reusable block functionality for the following blocks: Google Maps, How To, Icon List, Inline Notice, Lottie, Marketing Button, Modal, Popup Builder, Post Grid and Post Carousel.
+* Fix: Container - Resolved an issue in which the link tag would not work as intended on the front-end.
+* Fix: How To - Resolved an issue in which the minimum minutes setting would be unskippable.
+* Fix: Post Blocks - Resolved an issue in which the responsive styling would not work as intended in the editor.
+
+= 2.7.7 - TUESDAY, 29th AUGUST 2023 =
+* Improvement: Container - Added an image overlay option for the background.
+* Fix: Container - Resolved an issue wherein the blocks inside Containers would appear underneath the Container's overlay when set.
+* Fix: Container - Resolved an issue in which the flex properties would not work as intended in the frontend for the Image and Heading blocks in nested Containers.
+* Fix: Modal - Resolved an issue in which the Modal would not open in Astra's quick-view popup for WooCommerce products.
+* Fix: Post Blocks - Resolved an issue wherein taxonomies were not accessible to the Shop Manager role.
+* Fix: Separator - Resolved an edge-case issue in which the responsive alignment would not work as intended.
+* Fix: Table Of Contents - Resolved an issue in which Latin characters in a heading would prevent the links for that specific heading from working.
+* Fix: Table Of Contents - Resolved an issue wherein the collapsible setting would not work in the editor when enabled.
+* Fix: Table Of Contents - Resolved an issue wherein regenerating assets would cause the Table Of Contents to appear empty in FSE.
+* Fix: Global - Resolved an issue wherein a PHP warning could occurred in a few cases on some websites.
 
 = 2.7.6 - FRIDAY, 18th AUGUST 2023 =
 * Fix: Form - Resolved multiple styling issues on the frontend.

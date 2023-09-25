@@ -18,10 +18,12 @@ Template: astra
 .main-header-menu .menu-item{ /*retrait de l'espace en haut du menu de navigation */
     justify-content: flex-start !important;
 }
-
+.commander{
+    margin-top: 0 !important;
+}
 .commander a{
-    background-color:#D68D7E !important;
     color: white !important;
+    background-color: #E0B9B4 !important;
     font-size: 16px !important;
     font-weight: 500 !important;
     padding: 0 50px 0 !important;
@@ -39,27 +41,570 @@ Template: astra
     font-weight: 700;
 }
 
-/*****corps *****/
 
-
-/***page Accueil***/
+                                                /***page "accueil"***/
 /***partie galerie de fruits***/
+
+.conteneur-blanc{
+	filter: drop-shadow(0 -2mm 0 #E3D9D0);
+}
+
 .fruits {
-    width: 394px !important;
+    width: calc(50% - 30px) !important;
     height: 263px !important;
+}
+
+.colonne-fruits{
+    width: 70% !important;
 }
 
 .nom-de-fruits{
     flex-wrap: wrap ;
 }
 
-.ast-narrow-container .site-content{
+/***partie "ce qu'ils disent""***/
+.colonne-directionRow{ 
+    flex-direction: row;
+    justify-content: center;
+    width: 80% !important;
+}
 
+.conteneur-fathia, .conteneur-vero, .conteneur-marc{
+    width: 60% !important;
+    padding-left: 15px !important;
+}
+
+.image-fathia, .image-vero, .image-marc{
+margin-right: 0 !important;
+}
+
+.h2-fathia, .h2-vero, .h2-marc{
+    margin-bottom: 3px !important;
+}
+
+.colonne-fathia, .colonne-vero, .colonne-marc{
+    padding-top: 0 !important;
 }
 
 /***page Nous rentcontrer***/
-.nous-rencontrer-feuille-droite{
+.form-nous-contacter{
+    width: 30%;
 }
 
+.form-nous-contacter .wpcf7 input:not([type=submit]),.form-nous-contacter .wpcf7 select,
+.form-nous-contacter .wpcf7 textarea{
+    border-radius: 7px;
+}
+
+.form-nous-contacter .wpcf7 input:not([type=submit]),
+.form-nous-contacter .wpcf7 select{
+    height: 71px;
+    width: 383px;
+}
+
+.form-nous-contacter .wpcf7 textarea{
+    width: 383px;
+    height: 237px;
+}
+
+
+/***page Commander***/
+/***partie commande***/
+.commander {
+    margin-top: 30px;
+}
+.form-commander {
+    width: calc(75% - 20px) !important;
+}
+.form-commander .votre-commande{
+    border-top: solid white;
+    border-bottom: solid white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.form-commander h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.form-commander .directionRow{
+    display:flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+}
+    .form-commander .directionRow-2{
+        height: 56px;
+        display:flex;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        gap: 5px;
+    }
+        .form-commander .carre-blanc {
+            display: flex;
+            justify-content: flex-start !important;
+            align-items: center ;
+            width: 50% !important;
+        }
+        .form-commander .carre-blanc .total{
+            display: flex;
+            justify-content: flex-end;
+            width: 100% !important;
+        }
+
+        .form-commander .wpcf7 input:not([type=submit]), .form-commander .wpcf7 select,
+        .form-commander .wpcf7 textarea{
+            border-radius: 7px;
+        }
+            .form-commander .carre-blanc p {
+                margin-bottom: 0 !important;
+                width: 100%;
+            }      
+                .form-commander .plus-ou-moins{
+            display: flex !important;
+            flex-direction:column !important;
+            height: 53px;
+            justify-content: space-around !important;
+            position: absolute !important;
+            width: calc(4% - 8px) !important;
+            }
+            .form-commander .plus-ou-moins div{
+                height: 26px !important;
+            }
+                .form-commander .plus-ou-moins p {
+                    background-color: #E0B9B4;
+                    display : flex !important;
+                    flex-direction: column-reverse !important;
+                    justify-content: space-around !important;
+                    align-items: center;
+                    height: 25px !important;
+                    }
+                        .form-commander .plus-ou-moins .plus p{
+                            border-top-right-radius: 5px !important;
+                        }
+                        .form-commander .plus-ou-moins .moins p{
+                            border-bottom-right-radius: 5px !important;
+                        }
+
+        .form-commander .carre-rose {
+            display: flex;
+            justify-content: center !important;
+            align-items: center ;
+            width: 50% !important;
+        }                   
+            .form-commander .bouton-ok{
+                width: 90% !important;
+                padding: 10px!important;
+                margin: 0 !important;
+                background-color: #E0B9B4;
+                border-radius: 7px;
+            }
+                .form-commander .bouton-ok p{
+                    display: flex;
+                    margin-bottom: 0 !important;
+                    justify-content: center !important;
+                }
+                
+
+
+/***partie informations***/
+.form-commander .vos-informations{
+    padding-top: 40px !important;
+    margin-bottom: 40px !important ;
+}
+.form-commander .directionRow-3{
+    display:flex;
+    flex-direction: row !important;
+}
+    .form-commander .infos{
+        width: 50%;
+        padding-right: 30px;
+    }
+    .form-commander .livraison{
+        border-left: solid white;
+        width: 50%;
+        justify-content: flex-end !important;
+        padding-left: 30px;
+    }
+    .form-commander .directionRow-3 input:not([type=submit]),
+    .form-commander .directionRow-3 select{
+        height: 71px;
+    }
+    .form-commander .wpcf7 textarea{
+        width: 383px;
+        height: 237px;
+    }
+    .form-commander .h2{
+        color: white !important;
+        font-size: 20px !important;
+        font-weight: 400 !important;
+    }
+    .form-commander .bouton-envoyer{
+        display: flex !important;
+        justify-content: center !important;
+        font-size: 15px !important;
+        height: 55px !important;
+    }
+    .envoyer{
+        width: 100% !important;
+        height: 55px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+                                                /***page "accueil"***/
+/* Medium devices (largeur écran entre 831px et 1200px) */
+@media all and (min-width: 831px) and (max-width: 1200px){  
+    .boisson-energisante {
+        padding:0 !important;
+    } 
+    .conteneur-image-canette {
+        height: 450px;
+        margin-bottom: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+    }
+        .image-canette img {
+            object-fit: contain !important;
+            width: 80% !important;
+            }
+    .conteneur-blanc h3{
+        margin-top: 80px !important;
+    }     
+    .fruits {
+        width: calc(50% - 30px) !important;
+        height: 200px !important;
+    }
+        .nom-de-fruits {
+            font-size: 27px !important;
+        } 
+    .colonne-directionRow{ 
+        margin-left: 80px;
+        width: 80% !important;
+    }
+    .colonne-fathia, .colonne-vero, .colonne-marc{
+        padding-top: 0 !important;
+        width: 80% !important;
+    }
+        .colonne-fathia img, .colonne-vero img, .colonne-marc img{
+            margin-right: 8px !important;
+        }
+            .conteneur-fathia, .conteneur-vero, .conteneur-marc{ 
+                padding-left: 0 !important;
+                width: 100% !important
+            }
+            .conteneur-fathia p, .conteneur-vero p, .conteneur-marc p{ 
+                width: 100% !important
+            }       
+}
+
+/* Medium devices (largeur écran jusqu'à 830px) */
+@media (max-width: 830px){
+    .boisson-energisante {
+        font-size: 35px !important;
+        margin-bottom: 0 !important;
+        padding:0 !important;
+    }
+    .conteneur-image-canette {
+        height: 500px !important;
+        padding:0 !important;
+    }
+        .image-canette img {
+            object-fit: contain !important;
+            width: 80% !important;
+            height: 500px !important;
+            }
+
+    .conteneur-blanc h3{
+        margin-top: 60px !important;
+    }
+    .colonne-fruits{
+        width: 90% !important;
+    }
+    .fruits {
+        width: calc(40% - 30px) !important;
+        height: 150px !important;
+    }
+        .nom-de-fruits {
+            font-size: 24px !important;
+        }
+    .bloc-blanc-2{
+        padding-left: 30px !important;
+    }
+        .bloc-blanc-2 h2{
+            font-size: 25px !important;
+            margin-bottom: 20px !important;
+        }
+        .colonne-directionRow{ 
+            flex-direction: column !important;
+            height: 600px;
+            width: 80% !important;
+            margin-bottom: 0 !important;
+        }
+            .colonne-fathia, .colonne-vero, .colonne-marc{ 
+                height: 142px !important;
+                padding-left: 0 !important;
+            }
+            .conteneur-fathia p, .conteneur-vero p, .conteneur-marc p{ 
+                width: calc(90% - 30px) !important
+            }
+}
+
+ /* Medium devices (ecran jusqu'à 600) */
+ @media (max-width: 600px){
+    .boisson-energisante {
+        font-size: 25px !important;
+    }
+    .fruits {
+        width: 100%!important;
+        height: 150px !important;
+    }
+    .conteneur-image-canette {
+        height: 350px !important;
+        padding:0 !important;
+    }
+        .image-canette img {
+            object-fit: contain !important;
+            width: 80% !important;
+            height: 350px !important;
+            }
+    p{
+        font-size: 18px !important;
+    }
+    h2, .h2{
+        font-size: 28px !important;
+    }
+    .colonne-directionRow{ 
+        flex-direction: column !important;
+        height: 810px !important;
+    }    
+    .conteneur-fathia , .conteneur-vero , .conteneur-marc { 
+        width:100% !important;
+        padding-left: 0 !important;
+    }
+ }
+
+                                                /***page "nous rencontrer"***/
+/* Medium devices (largeur écran entre 870px et 1200px) */
+@media all and (min-width: 870px) and (max-width: 1200px){ 
+    .conteneur-nous-rencontrer {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+       } 
+    .titre-nous-rencontrer{
+        font-size: 30px !important;
+        width: calc(60% - 20px) !important;
+    }
+    .conteneur-nous-rencontrer p{
+        font-size: 20px !important;
+        width: 80% !important;
+        padding-right:50px !important;
+        padding-left: 50px !important;
+    }
+    .conteneur-conteneur-equipe{
+        min-height: 495px !important;
+        padding-top: 0px !important;
+       }
+        .conteneur-equipe{
+            background-size: 150px !important;
+        }
+            .colonnes-equipe {
+                margin-top: 30px !important;
+                margin-bottom: 60px !important;
+                padding-right: 10px !important;
+                padding-left: 10px !important;
+                width: calc(80% - 20px) !important
+            } 
+}
+
+/* Medium devices (largeur écran jusqu'à 869px) */
+@media (max-width: 869px){
+    .conteneur-nous-rencontrer {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+        background-size: 125px !important;
+       } 
+   .titre-nous-rencontrer{
+    font-size: 28px !important;
+    width: calc(60% - 20px) !important;
+   }
+   .conteneur-nous-rencontrer p{
+    font-size: 18px !important;
+    width: 80% !important;
+    padding-right:30px !important;
+    padding-left: 30px !important;
+    margin-bottom: 0 !important;
+   }
+   .conteneur-conteneur-equipe{
+    min-height: 0px !important;
+    padding: 0 10px 0 10px !important;
+    justify-content: center !important;
+   }
+        .conteneur-equipe{
+            background-size: 120px !important;
+            margin-top: 60px !important;
+        }
+            .colonnes-equipe {
+                margin:30px 0 30px 0 !important;
+                padding-right: 10px !important;
+                padding-left: 10px !important;
+                width: calc(80% - 20px) !important;
+            }
+            .colonne-equipe h2{
+                font-size: 20px !important;
+            }
+}
+
+ /* Medium devices (ecran jusqu'à 760) */
+ @media (max-width: 760px){
+    .titre-nous-rencontrer{
+        font-size: 20px !important;
+        width: calc(50% - 20px) !important;
+       }
+    .conteneur-nous-rencontrer p{
+        font-size: 15px !important;
+        padding-right:0 !important;
+        padding-left: 0 !important;
+    }
+    .conteneur-equipe{
+        background-size: 110px !important;
+    }        
+            .colonnes-equipe img{
+                width: 100% !important;
+                height: 130px !important;
+                }
+            .colonnes-equipe {
+                width: 100% !important;
+                padding-right: 50px !important;
+                padding-left: 50px !important;
+                }
+ }
+
+  /* Medium devices (ecran jusqu'à 650) */
+  @media (max-width: 650px){
+    .conteneur-nous-rencontrer {
+        background-size: 100px !important;
+    }
+    .titre-nous-rencontrer{
+        font-size: 16px !important;
+    }
+    .conteneur-equipe{
+        background-size: 80px !important;
+    }
+
+ }
+
+   /* Medium devices (ecran jusqu'à 560) */
+   @media (max-width: 560px){
+    .custom-logo{ /**logo du menu**/
+        width: 100% !important;
+    }
+    .conteneur-nous-rencontrer {
+        background-size: 60px !important;
+    }
+    .titre-nous-rencontrer {
+        font-size: 16px !important;
+        width: calc(60% - 20px) !important;
+    }
+        .conteneur-nous-rencontrer p{
+            font-size: 12px;
+            padding-right:5px !important;
+            padding-left: 0px !important;
+        }
+    .conteneur-conteneur-equipe{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+        .conteneur-equipe{
+            margin-top: 160px !important;
+        }
+            .groupe-equipe h2{
+                font-size: 25px !important;
+            }
+            .colonnes-equipe{
+                flex-direction: column;
+            }
+                .colonnes-equipe img{
+                    width: 100% !important;
+                    height: 130px !important;
+                }
+                .colonnes-equipe h2{
+                    font-size: 18px !important;
+                }
+    .nous-contacter-h2{
+        font-size: 25px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+    }   
+ }
+
+                                                /***page "commander"***/
+/* Medium devices (largeur écran entre 780px et 1095px) */
+@media all and (min-width: 780px) and (max-width: 1095px){  
+    .form-commander, .form-commander .nom, .form-commander .prenom,
+    .form-commander .email, .form-commander .adresse, .form-commander .code-postal,
+    .form-commander .ville{
+        width: calc(90% - 20px) !important;
+    }
+    .form-commander .livraison{
+        padding-left: 30px;
+    }
+    .form-commander .directionRow-3 input:not([type=submit]),
+    .form-commander .directionRow-3 select{
+    width: 100% !important;
+    }
+    .form-commander h1 {
+        font-size: 24px !important;
+    }
+}
+
+/* Medium devices (largeur écran max 779px) */
+@media (max-width: 779px){
+    .commander-h1 {
+        font-size: 30px !important;
+    }
+    .form-commander {
+        width: calc(100% - 20px) !important;
+    }
+    .form-commander h1 {
+        font-size: 17px !important;
+    }
+    .form-commander .h2 {
+        font-size: 15px !important;
+    } 
+}
+
+ /* Medium devices (ecran max 532px) */
+ @media (max-width: 532px){
+    .commander-h1 {
+        font-size: 20px !important;
+    }
+    .form-commander .votre-commande {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+        .form-commander .directionRow{
+            display:flex;
+            flex-direction: column !important;
+        }
+    .form-commander .directionRow-3{
+        display:flex;
+        flex-direction: column !important;
+    }
+    .form-commander .infos, .form-commander .livraison {
+        border-left: none;
+        width: 100% !important;
+        justify-content: none;
+        padding: 0;
+    }
+ }
 
 
