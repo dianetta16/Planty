@@ -14,12 +14,20 @@ Template: astra
 #masthead .ast-container, .site-header-focus-item + .ast-breadcrumbs-wrapper {    /*marge gauche côté commande enlevée */
     padding-right: 0 !important;
 }
-
+.admin{
+    display: flex;
+    align-items: center;
+}
+.admin a{
+    color:black !important;
+    font-size: 0.88235294117647rem;
+}
 .main-header-menu .menu-item{ /*retrait de l'espace en haut du menu de navigation */
     justify-content: flex-start !important;
 }
 .commander{
     margin-top: 0 !important;
+    order: 3 !important;
 }
 .commander a{
     color: white !important;
@@ -63,6 +71,10 @@ Template: astra
 }
 
 /***partie "ce qu'ils disent""***/
+.bloc-blanc-2{
+    background-size: 100% 100% !important;
+}       
+
 .colonne-directionRow{ 
     flex-direction: row;
     justify-content: center;
@@ -296,9 +308,9 @@ margin-right: 0 !important;
             }
             .conteneur-fathia p, .conteneur-vero p, .conteneur-marc p{ 
                 width: 100% !important
-            }       
-}
+            }
 
+    }
 /* Medium devices (largeur écran jusqu'à 830px) */
 @media (max-width: 830px){
     .boisson-energisante {
@@ -354,35 +366,64 @@ margin-right: 0 !important;
  /* Medium devices (ecran jusqu'à 600) */
  @media (max-width: 600px){
     .boisson-energisante {
-        font-size: 25px !important;
+        margin-top: 30px !important;
+        font-size: 20px !important;
     }
-    .fruits {
-        width: 100%!important;
-        height: 150px !important;
+    .colonne-fruits{
+        width:80% !important;
     }
+        .fruits {
+            width: 100%!important;
+            height: 150px !important;
+        }
+            .fruits p{
+                font-size: 20px !important;
+            }
     .conteneur-image-canette {
-        height: 350px !important;
+        height: 280px !important;
         padding:0 !important;
     }
         .image-canette img {
             object-fit: contain !important;
-            width: 80% !important;
-            height: 350px !important;
+            width: 100% !important;
+            height: 280px !important;
             }
-    p{
+    .conteneur-blanc{
+        padding-top: 0 !important;
+        background-image: none !important;
+        background-color: white;
+        }
+        .conteneur-blanc h3{
+            font-size: 25px !important; 
+            margin-bottom: 0 !important;
+            margin-top: 20px !important;
+        }
+        .energie-p{
+            font-size: 18px !important;     
+        }
+    .gout-h2{
+        font-size: 25px !important;
+        margin-top: 30px !important;
+    }
+    .gout-p{
         font-size: 18px !important;
+        margin-bottom: 0 !important;
     }
-    h2, .h2{
-        font-size: 28px !important;
+    .bloc-blanc-2 h2{
+        font-size: 20px !important;
+        margin-top: 50px !important;
     }
-    .colonne-directionRow{ 
-        flex-direction: column !important;
-        height: 810px !important;
-    }    
-    .conteneur-fathia , .conteneur-vero , .conteneur-marc { 
-        width:100% !important;
-        padding-left: 0 !important;
-    }
+        .colonne-directionRow{ 
+            flex-direction: column !important;
+            height: 880px !important;
+        }    
+            .conteneur-fathia , .conteneur-vero , .conteneur-marc { 
+                width:100% !important;
+                padding-left: 0 !important;
+            }
+                .bloc-blanc-2 h3{
+                    font-size: 20px !important;
+                }
  }
 
                                                 /***page "nous rencontrer"***/
@@ -496,7 +537,13 @@ margin-right: 0 !important;
     .conteneur-equipe{
         background-size: 80px !important;
     }
-
+    .nous-contacter-h2,
+    .groupe-equipe h2{
+        font-size: 25px !important; 
+    }
+    .groupe-equipe .colonne-img h2{
+        font-size: 20px !important;    
+    }
  }
 
    /* Medium devices (ecran jusqu'à 560) */
@@ -505,23 +552,25 @@ margin-right: 0 !important;
         width: 100% !important;
     }
     .conteneur-nous-rencontrer {
-        background-size: 60px !important;
+        background-image: none !important;
+        margin-bottom: 30px;
     }
     .titre-nous-rencontrer {
+        padding-top: 30px !important;
         font-size: 16px !important;
-        width: calc(60% - 20px) !important;
+        width: calc(90% - 20px) !important;
     }
         .conteneur-nous-rencontrer p{
             font-size: 12px;
             padding-right:5px !important;
-            padding-left: 0px !important;
+            padding-left: 0 !important;
         }
     .conteneur-conteneur-equipe{
-        padding-right: 0px !important;
-        padding-left: 0px !important;
+        background-image: none !important;
+        background-color: white;
     }
         .conteneur-equipe{
-            margin-top: 160px !important;
+            margin-top: 20px !important;
         }
             .groupe-equipe h2{
                 font-size: 25px !important;
@@ -536,17 +585,18 @@ margin-right: 0 !important;
                 .colonnes-equipe h2{
                     font-size: 18px !important;
                 }
-    .nous-contacter-h2{
-        font-size: 25px !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-
-    }   
+    .conteneur-nous-contacter .wp-block-contact-form-7-contact-form-selector{
+        width: calc(90% - 10px) !important;
+    }
  }
 
                                                 /***page "commander"***/
-/* Medium devices (largeur écran entre 780px et 1095px) */
-@media all and (min-width: 780px) and (max-width: 1095px){  
+/* Medium devices (largeur écran entre 780px et 1250px) */
+@media all and (min-width: 780px) and (max-width: 1250px){
+    .form-commander .plus-ou-moins {
+        width: calc(6% - 8px) !important;
+    }
+    
     .form-commander, .form-commander .nom, .form-commander .prenom,
     .form-commander .email, .form-commander .adresse, .form-commander .code-postal,
     .form-commander .ville{
@@ -563,6 +613,14 @@ margin-right: 0 !important;
         font-size: 24px !important;
     }
 }
+/* Medium devices (écran max 921px) */
+@media (max-width: 921px){
+   .admin a,
+   .commander a{
+    padding-left: 20px !important;
+   } 
+}
+
 
 /* Medium devices (largeur écran max 779px) */
 @media (max-width: 779px){
@@ -578,10 +636,16 @@ margin-right: 0 !important;
     .form-commander .h2 {
         font-size: 15px !important;
     } 
+    .form-commander .plus-ou-moins {
+        width: calc(6% - 8px) !important;
+    }
 }
 
  /* Medium devices (ecran max 532px) */
  @media (max-width: 532px){
+    .form-commander .plus-ou-moins {
+        width: calc(10% - 8px) !important;
+    }
     .commander-h1 {
         font-size: 20px !important;
     }

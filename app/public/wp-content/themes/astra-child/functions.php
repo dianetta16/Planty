@@ -23,3 +23,15 @@ function child_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+
+function add_lien_admin( $items, $args ) {
+	if (is_user_logged_in() && ($args->theme_location == 'primary'|| $args->theme_location == 'mobile_menu')) {
+		$items .= '<li class="admin"><a href="'
+		. admin_url() .
+		'">Admin</a></li>';
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'add_lien_admin', 10, 2 );
+
